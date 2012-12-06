@@ -1,4 +1,6 @@
 <includes>
+	<include file="metropolis_weather.xml" />
+	<include file="weather.xml" />
 	<include file="defaults.xml" />
 	<include file="ViewsVideoLibrary.xml" />
 	<include file="ViewsMusicLibrary.xml" />

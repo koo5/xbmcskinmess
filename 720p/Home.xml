@@ -8,7 +8,7 @@
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<onup>600</onup>
-				<ondown>9001</ondown>
+				<ondown>9002</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>0</scrolltime>
 				<focusposition>2</focusposition>
@@ -31,21 +31,21 @@
 				</focusedlayout>
 
 				<content>
+					<item id="20">
+						<label>8</label>
+						<onclick>Down</onclick>
+						<icon>special://skin/media/weather.png</icon>
+						<thumb>special://skin/media/weather.png</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
+					</item>
 					<item id="13">
 						<label>8</label>
-						<onclick>ActivateWindow(Weather)</onclick>
-						<icon>special://skin/media/internetova_media.png</icon>
-						<thumb>special://skin/media/internetova_media.png</thumb>
+						<onclick>Down</onclick>
+						<icon>special://skin/media/internet_media.jpeg</icon>
+						<thumb>special://skin/media/internet_media.jpeg</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
 					</item>
-					<item id="7">
-						<label>8</label>
-						<onclick>ActivateWindow(Weather)</onclick>
-						<icon>special://skin/backgrounds/weather.jpg</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
-					</item>
-					<item id="4">
+					<item id="22">
 						<label>1</label>
 						<onclick>ActivateWindow(Pictures)</onclick>
 						<icon>special://skin/backgrounds/pictures.jpg</icon>
@@ -123,7 +123,7 @@
 			<height>600</height>
 			<onleft>9002</onleft>
 			<onright>9002</onright>
-			<onup>9001</onup>
+			<onup>9000</onup>
 			<ondown>20</ondown>
 			<pagecontrol>-</pagecontrol>
 			<scrolltime>300</scrolltime>
@@ -402,126 +402,21 @@
 
 
 
-
-
-
-
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomeMusicButton1))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomeMusicButton1)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton1))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(3) + !IsEmpty(Skin.String(HomeMusicButton1))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomeMusicButton2))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomeMusicButton2)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton2))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(3) + !IsEmpty(Skin.String(HomeMusicButton2))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomeMusicButton3))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomeMusicButton3)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton3))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(3) + !IsEmpty(Skin.String(HomeMusicButton3))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomeMusicButton4))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomeMusicButton4)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton4))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(3) + !IsEmpty(Skin.String(HomeMusicButton4))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomeMusicButton5))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomeMusicButton5)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton5))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(3) + !IsEmpty(Skin.String(HomeMusicButton5))</visible>
-				</item>
-
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomePictureButton1))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomePictureButton1)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomePictureButton1))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(4) + !IsEmpty(Skin.String(HomePictureButton1))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomePictureButton2))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomePictureButton2)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomePictureButton2))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(4) + !IsEmpty(Skin.String(HomePictureButton2))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomePictureButton3))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomePictureButton3)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomePictureButton3))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(4) + !IsEmpty(Skin.String(HomePictureButton3))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomePictureButton4))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomePictureButton4)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomePictureButton4))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(4) + !IsEmpty(Skin.String(HomePictureButton4))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomePictureButton5))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomePictureButton5)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomePictureButton5))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(4) + !IsEmpty(Skin.String(HomePictureButton5))</visible>
-				</item>
-
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomeProgramButton1))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomeProgramButton1)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomeProgramButton1))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(1) + !IsEmpty(Skin.String(HomeProgramButton1))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomeProgramButton2))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomeProgramButton2)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomeProgramButton2))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(1) + !IsEmpty(Skin.String(HomeProgramButton2))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomeProgramButton3))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomeProgramButton3)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomeProgramButton3))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(1) + !IsEmpty(Skin.String(HomeProgramButton3))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomeProgramButton4))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomeProgramButton4)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomeProgramButton4))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(1) + !IsEmpty(Skin.String(HomeProgramButton4))</visible>
-				</item>
-				<item>
-					<label>$INFO[system.addontitle(Skin.String(HomeProgramButton5))]</label>
-					<onclick>RunAddon($INFO[Skin.String(HomeProgramButton5)])</onclick>
-					<icon>$INFO[system.addonicon(Skin.String(HomeProgramButton5))]</icon>
-					<thumb>-</thumb>
-					<visible>Container(9000).HasFocus(1) + !IsEmpty(Skin.String(HomeProgramButton5))</visible>
-				</item>
 			</content>
 		</control>
 
 
 
+		<control type="group">
+			<include>weather</include>
+			<visible>Container(9000).HasFocus(20)</visible>
 
+		</control>
+		<control type="group">
 
+		<include>HomeSubMenuVideos</include>
 
-
+		</control>
 
 	</controls>	
 </window>
